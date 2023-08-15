@@ -74,7 +74,7 @@ const PersonalInfo = () => {
                   onChange={handleChange}
                   checked={status.value === workAuthorization}
                 />
-                <label htmlFor="status">{status.title}</label>
+                <span>{status.title}</span>
               </div>
             );
           })}
@@ -94,7 +94,7 @@ const PersonalInfo = () => {
                   onChange={handleChange}
                   checked={status.value === sponsorship}
                 />
-                <label htmlFor="status">{status.title}</label>
+                <span>{status.title}</span>
               </div>
             );
           })}
@@ -111,7 +111,7 @@ const PersonalInfo = () => {
                   onChange={handleChange}
                   checked={status.value === openToRemoteWork}
                 />
-                <label htmlFor="status">{status.title}</label>
+                <span>{status.title}</span>
               </div>
             );
           })}

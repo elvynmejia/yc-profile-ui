@@ -3,6 +3,13 @@ const PersonalInfo = () => {
   return (
     <div>
       <h1 className="page-header">Career</h1>
+      <form>
+      <div className="form-control">
+          <label htmlFor="html">What size company would you like to work at? *</label>
+          {/* <input type="text" name="city" value={city} onChange={handleChange} /> */}
+        </div>
+      </form>
+
       {/* <form noValidate autoComplete="off">
         <div className="form-control">
           <label htmlFor="html">What city do you live in? *</label>

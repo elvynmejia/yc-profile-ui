@@ -118,7 +118,7 @@ const PersonalInfo = () => {
                   onChange={handleChange}
                   checked={state.status === status.value}
                 />
-                <label htmlFor="status">{status.title}</label>
+                <span>{status.title}</span>
               </div>
             );
           })}
@@ -135,7 +135,7 @@ const PersonalInfo = () => {
                   checked={state.affiliation === status.value}
                   onChange={handleChange}
                 />
-                <label htmlFor="status">{status.title}</label>
+                <span>{status.title}</span>
               </div>
             );
           })}
