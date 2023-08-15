@@ -32,6 +32,9 @@ const App = () => {
          <ListItemLink href="/">
            <ListItemText primary="Personal Profile" />
          </ListItemLink>
+         <ListItemLink href="/location">
+           <ListItemText primary="Location" />
+         </ListItemLink>
          <ListItemLink href="/career">
            <ListItemText primary="Career" />
          </ListItemLink>

@@ -10,6 +10,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import PersonalInfo from './routes/personalInfo';
+import Location from './routes/Location';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <PersonalInfo />
+      },
+      {
+        path: '/location',
+        element: <Location />,
       },
       {
         path: '/career',
