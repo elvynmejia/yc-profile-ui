@@ -1,61 +1,9 @@
-import { useReducer } from 'react';
-import Button from '@material-ui/core/Button';
-
-import { useNavigate } from 'react-router-dom';
-
-import {
-  reducer,
-  LOCATION_INFO,
-  locationInfoDefaultState,
-} from '../reducers/location';
-
-import {
-  REMOTE_WORK_PREFERENCES,
-  EMPLOYMENT_SPONSORSHIP,
-  WORK_AUTHORIZATION,
-} from '../constants';
-
 // FIX: select radio button if loading data from local storage
 const PersonalInfo = () => {
-  const navigate = useNavigate();
-
-  let locationInfoFromLocalStorage = localStorage.getItem(LOCATION_INFO);
-
-  let locationInfo;
-
-  if (locationInfoFromLocalStorage) {
-    locationInfo = JSON.parse(locationInfoFromLocalStorage);
-  } else {
-    locationInfo = locationInfoDefaultState;
-  }
-
-  const [state, dispatch] = useReducer(reducer, locationInfo);
-
-  const saveAndNext = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-
-    localStorage.setItem(LOCATION_INFO, JSON.stringify(state));
-
-    navigate('/career');
-  };
-
-  // refactor as a hook
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    dispatch({
-      type: LOCATION_INFO,
-      payload: {
-        [name]: value,
-      },
-    });
-  };
-
-  const { city, workAuthorization, sponsorship, openToRemoteWork } = state;
-
   return (
     <div>
-      <h1 className="page-header">Location</h1>
-      <form noValidate autoComplete="off">
+      <h1 className="page-header">Career</h1>
+      {/* <form noValidate autoComplete="off">
         <div className="form-control">
           <label htmlFor="html">What city do you live in? *</label>
           <input type="text" name="city" value={city} onChange={handleChange} />
@@ -66,8 +14,9 @@ const PersonalInfo = () => {
           </label>
           {WORK_AUTHORIZATION.map((status) => {
             return (
-              <div key={status.value}>
+              <div>
                 <input
+                  key={status.value}
                   type="radio"
                   name="workAuthorization"
                   value={status.value}
@@ -85,8 +34,9 @@ const PersonalInfo = () => {
           </label>
           {EMPLOYMENT_SPONSORSHIP.map((status) => {
             return (
-              <div key={status.value}>
+              <div>
                 <input
+                  key={status.value}
                   type="radio"
                   name="sponsorship"
                   value={status.value}
@@ -101,8 +51,9 @@ const PersonalInfo = () => {
           <label htmlFor="html">Are you open to working remotely? *</label>
           {REMOTE_WORK_PREFERENCES.map((status) => {
             return (
-              <div key={status.value}>
+              <div>
                 <input
+                  key={status.value}
                   type="radio"
                   name="openToRemoteWork"
                   value={status.value}
@@ -115,7 +66,6 @@ const PersonalInfo = () => {
         </div>
         <div className="submit-form">
           <Button
-            className='save-and-next-button'
             variant="contained"
             color="primary"
             type="submit"
@@ -124,7 +74,7 @@ const PersonalInfo = () => {
             Save & next
           </Button>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 };

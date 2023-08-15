@@ -1,9 +1,5 @@
-import { useReducer, useState } from 'react';
-
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
+import { useReducer } from 'react';
+import Button from '@material-ui/core/Button';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -15,24 +11,8 @@ import {
 
 import { JOB_SEARCH_STATUS, AFFILIATIONS } from '../constants';
 
-const useStyles = makeStyles(() => ({
-  root: {
-    '& > *': {
-      // padding: theme.spacing(),
-      // width: '100%'
-      marginTop: '20px',
-      width: '100ch',
-    },
-  },
-  textField: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-}));
-
 // FIX: select radio button if loading data from local storage
 const PersonalInfo = () => {
-  const classes = useStyles();
   const navigate = useNavigate();
 
   let personalProfileFromLocalStorage = localStorage.getItem(PERSONAL_INFO);
@@ -70,10 +50,23 @@ const PersonalInfo = () => {
 
   return (
     <div>
-      <h1>Personal info</h1>
-      <form noValidate autoComplete="off" className={classes.root}>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <div className={classes.textField}>
+      <h1 className="page-header">Personal info</h1>
+      <p>
+        Connect with over one thousand YC startup founders with a single
+        profile. Founders can reach you via email or through the platform. (And
+        we'll send you notifications.)
+      </p>
+      <form noValidate autoComplete="off" className="form">
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+          }}
+        >
+          <div
+            className="form-control"
+            style={{ width: '50%', marginRight: '50px' }}
+          >
             <label htmlFor="html">First Name *</label>
             <input
               type="text"
@@ -82,7 +75,7 @@ const PersonalInfo = () => {
               onChange={handleChange}
             />
           </div>
-          <div className={classes.textField}>
+          <div className="form-control" style={{ width: '50%' }}>
             <label htmlFor="html">Last Name *</label>
             <input
               type="text"
@@ -92,7 +85,8 @@ const PersonalInfo = () => {
             />
           </div>
         </div>
-        <div className={classes.textField}>
+
+        <div className="form-control">
           <label htmlFor="html">Email Address (personal recommended) *</label>
           <input
             type="email"
@@ -101,7 +95,7 @@ const PersonalInfo = () => {
             onChange={handleChange}
           />
         </div>
-        <div className={classes.textField}>
+        <div className="form-control">
           <label htmlFor="html">
             LinkedIn Profile URL (highly recommended) *
           </label>
@@ -112,13 +106,12 @@ const PersonalInfo = () => {
             onChange={handleChange}
           />
         </div>
-        <div className={classes.textField}>
+        <div className="form-control">
           <label htmlFor="html">What is your job search status? *</label>
           {JOB_SEARCH_STATUS.map((status) => {
             return (
-              <div>
+              <div key={status.value}>
                 <input
-                  key={status.value}
                   type="radio"
                   name="status"
                   value={status.value}
@@ -129,13 +122,12 @@ const PersonalInfo = () => {
             );
           })}
         </div>
-        <div className={classes.textField}>
+        <div className="form-control">
           <label htmlFor="html">Have you worked at a YC company? *</label>
           {AFFILIATIONS.map((status) => {
             return (
-              <div>
+              <div key={status.value}>
                 <input
-                  key={status.value}
                   type="radio"
                   name="affiliation"
                   value={status.value}
@@ -146,7 +138,7 @@ const PersonalInfo = () => {
             );
           })}
         </div>
-        <div className={classes.textField}>
+        <div className="form-control">
           <label htmlFor="html">
             Are there YC companies you want to be hidden from? (e.g. your
             current employer) *
@@ -160,9 +152,15 @@ const PersonalInfo = () => {
         </div>
 
         <div className="submit-form">
-          <button type="submit" onClick={saveAndNext}>
+          <Button
+            className='save-and-next-button'
+            variant="contained"
+            color="primary"
+            type="submit"
+            onClick={saveAndNext}
+          >
             Save & next
-          </button>
+          </Button>
         </div>
       </form>
     </div>
