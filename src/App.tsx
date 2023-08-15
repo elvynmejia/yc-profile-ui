@@ -1,36 +1,50 @@
-import { useEffect, useState, useRef } from 'react';
-import './App.css';
-import axios from 'axios';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import { Outlet } from "react-router-dom";
 
-const getApiState = async () => {
-  return await axios.get('http://127.0.0.1:3000/health/ok');
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+
+const ListItemLink = (props: any) => {
+  return <ListItem button component="a" {...props} />;
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    height: 140,
+    width: 100,
+  },
+  control: {
+    padding: theme.spacing(2),
+  },
+}));
 
 const App = () => {
-  const callCounter = useRef(0);
-  const [apiState, setApiState] = useState('');
-
-  // ping API every 5 secods
-  useEffect(() => {
-    const interval = setInterval(() => {
-      getApiState()
-      .then((res) => {
-        setApiState(res.data);
-        callCounter.current = callCounter.current + 1;
-      }).catch((e: any) => {
-        setApiState(`An error occured. Make sure API is up and running ${e}`);
-        callCounter.current = callCounter.current + 1;
-      });
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
+  const classes = useStyles();
   return (
-    <div>
-      <p>number of calls {callCounter.current}</p>
-      <h1>API state: {apiState}</h1>
-    </div>
-  )
+    <Grid container className={classes.root} spacing={2}>
+      <Grid item xs={3}>
+        <List component="nav" aria-label="secondary mailbox folders">
+         <ListItemLink href="/">
+           <ListItemText primary="Personal Profile" />
+         </ListItemLink>
+         <ListItemLink href="/career">
+           <ListItemText primary="Career" />
+         </ListItemLink>
+         <ListItemLink href="/share">
+           <ListItemText primary="Share" />
+         </ListItemLink>
+       </List>
+      </Grid>
+      <Grid item xs={9}>
+        <Outlet />
+      </Grid>
+    </Grid>
+  );
 }
 
-export default App
+export default App;
