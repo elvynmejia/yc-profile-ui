@@ -46,8 +46,8 @@ const PersonalInfo = () => {
     });
   };
 
-  const { email, linkedin, firstName, lastName, hideFrom } = state;
-
+  const { email, linkedin, firstName, lastName, hideFrom, affiliation } = state;
+  console.log({ affiliation })
   return (
     <div>
       <h1 className="page-header">Personal info</h1>
@@ -116,6 +116,7 @@ const PersonalInfo = () => {
                   name="status"
                   value={status.value}
                   onChange={handleChange}
+                  checked={state.status === status.value}
                 />
                 <label htmlFor="status">{status.title}</label>
               </div>
@@ -131,6 +132,7 @@ const PersonalInfo = () => {
                   type="radio"
                   name="affiliation"
                   value={status.value}
+                  checked={state.affiliation === status.value}
                   onChange={handleChange}
                 />
                 <label htmlFor="status">{status.title}</label>

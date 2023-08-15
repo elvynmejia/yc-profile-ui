@@ -69,6 +69,12 @@ input[type=text], input[type=email] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+input[type=radio] {
+  margin-right: 15px;
 }
 
 .form {
@@ -118,4 +124,10 @@ li {
     box-shadow: 0 0 0 1px rgba(0,0,0,.05), 0 2px 2px rgba(0,0,0,.1);
     outline: none;
     padding: 18px 24px;
+}
+
+label {
+  margin-bottom: 100px !important;
+  padding-bottom: 400px !important;
+  /* background-color: red; */
 }

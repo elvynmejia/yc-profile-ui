@@ -72,6 +72,7 @@ const PersonalInfo = () => {
                   name="workAuthorization"
                   value={status.value}
                   onChange={handleChange}
+                  checked={status.value === workAuthorization}
                 />
                 <label htmlFor="status">{status.title}</label>
               </div>
@@ -91,6 +92,7 @@ const PersonalInfo = () => {
                   name="sponsorship"
                   value={status.value}
                   onChange={handleChange}
+                  checked={status.value === sponsorship}
                 />
                 <label htmlFor="status">{status.title}</label>
               </div>
@@ -107,6 +109,7 @@ const PersonalInfo = () => {
                   name="openToRemoteWork"
                   value={status.value}
                   onChange={handleChange}
+                  checked={status.value === openToRemoteWork}
                 />
                 <label htmlFor="status">{status.title}</label>
               </div>
