@@ -1,27 +1,33 @@
-# React + TypeScript + Vite
+My YC Profile ReactJS app scaffolded using vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Features
+- Edit Peersonal Info
+- Edit Location
+- Edit Career
 
-Currently, two official plugins are available:
+- save data to local storage
+- retreives data from local storage
+- allows navigation between profile pages
+- uses local component state
+- uses reducers to manipulate state
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# TODOS
+- abstract repeated code that sets and access local storage into a reusable hooks
 
-## Expanding the ESLint configuration
+```
+  let fromLocalStorage = localStorage.getItem(CAREER_PREFERENCES);
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  let companyPreferences;
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+  if (fromLocalStorage) {
+    companyPreferences = JSON.parse(fromLocalStorage);
+  } else {
+    companyPreferences = defaultState;
+  }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Create a reusable component for the Save & Next button
+- Adds test
+- think about local component state vs global state
+- save data to API
+- validate data on the frontend

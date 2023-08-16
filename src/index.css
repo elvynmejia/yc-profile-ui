@@ -30,13 +30,13 @@ a.active {
   color: #646cff;
 }
 
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+body {
+  margin-top: 50px;
+  /* display: flex; */
+  /* place-items: center;
   min-width: 320px;
-  min-height: 100vh;
-} */
+  min-height: 100vh; */
+}
 
 body {
   background-color: #f5f5ef;
@@ -107,6 +107,7 @@ li {
 .page-header {
   border-bottom: 1px solid #dedede;
   margin: 0 0 25px;
+  font-size: 41px;
 }
 
 .save-and-next-button {

@@ -20,6 +20,8 @@ const App = () => {
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={2}>
+      </Grid>
+      <Grid item xs={2}>
         <div className="side-nav">
           <h3 style={{ marginLeft: '35px' }}>My Profile</h3>
           <ul>

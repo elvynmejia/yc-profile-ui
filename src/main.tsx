@@ -6,9 +6,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import PersonalInfo from './routes/personalInfo';
-import Location from './routes/location';
-import Career from './routes/career';
+import PersonalInfo from './pages/personalInfo.tsx';
+import Location from './pages/location.tsx';
+import Career from './pages/career.tsx';
 
 const router = createBrowserRouter([
   {
