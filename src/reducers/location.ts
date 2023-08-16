@@ -7,7 +7,7 @@ export type locationInfoDefaultStateType = {
   openToRemoteWork: boolean | '';
 };
 
-const locationInfoDefaultState = {
+const defaultState = {
   city: '',
   workAuthorization: '',
   sponsorship: '',
@@ -27,4 +27,4 @@ const reducer = (state: any, action: any) => {
   }
 };
 
-export { LOCATION_INFO, reducer, locationInfoDefaultState };
+export { LOCATION_INFO, reducer, defaultState };

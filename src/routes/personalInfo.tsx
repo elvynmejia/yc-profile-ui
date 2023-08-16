@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   reducer,
   PERSONAL_INFO,
-  personalInfoDefaultState,
+  defaultState,
 } from '../reducers/profile';
 
 import { JOB_SEARCH_STATUS, AFFILIATIONS } from '../constants';
@@ -15,14 +15,14 @@ import { JOB_SEARCH_STATUS, AFFILIATIONS } from '../constants';
 const PersonalInfo = () => {
   const navigate = useNavigate();
 
-  let personalProfileFromLocalStorage = localStorage.getItem(PERSONAL_INFO);
+  let promLocalStorage = localStorage.getItem(PERSONAL_INFO);
 
   let personalProfile;
 
-  if (personalProfileFromLocalStorage) {
-    personalProfile = JSON.parse(personalProfileFromLocalStorage);
+  if (promLocalStorage) {
+    personalProfile = JSON.parse(promLocalStorage);
   } else {
-    personalProfile = personalInfoDefaultState;
+    personalProfile = defaultState;
   }
 
   const [state, dispatch] = useReducer(reducer, personalProfile);

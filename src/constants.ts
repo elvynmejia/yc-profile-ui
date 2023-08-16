@@ -52,10 +52,36 @@ const REMOTE_WORK_PREFERENCES = [
     value: 'no',
   },
 ];
+
+
+const COMPANY_PREFERENCES = [
+  {
+    title: 'Seed: 1 - 10 people',
+    ratings: ['high', 'medium', 'low'],
+    name: 'seedStagePreference',
+  },
+  {
+    title: 'Small: 11 - 50 people',
+    ratings: ['high', 'medium', 'low'],
+    name: 'smallStagePreference',
+  },
+  {
+    title: 'Medium: 51 - 300 people',
+    ratings: ['high', 'medium', 'low'],
+    name: 'mediumStagePreference',
+  },
+  {
+    title: 'Large: 301+ people',
+    ratings: ['high', 'medium', 'low'],
+    name: 'largeStagePreference',
+  },
+];
+
 export {
   JOB_SEARCH_STATUS,
   AFFILIATIONS,
   WORK_AUTHORIZATION,
   EMPLOYMENT_SPONSORSHIP,
   REMOTE_WORK_PREFERENCES,
+  COMPANY_PREFERENCES
 };

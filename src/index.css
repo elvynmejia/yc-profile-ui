@@ -130,6 +130,42 @@ label {
   margin-bottom: 100px !important;
   padding-bottom: 400px !important;
   /* background-color: red; */
-  font-weight: bold;
-  
+  font-weight: bold;  
+}
+
+.container {
+  display: 'flex';
+  flex-direction: 'column';
+}
+
+.container-heading {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%,
+}
+
+.container-heading-item {
+  width: 200px
+}
+
+.rating-grid-row {
+  border-bottom: 1px solid #dedede;
+  height: 40px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-grid-columns {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.grid-column-item {
+  width: 200px
 }

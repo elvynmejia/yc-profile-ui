@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   reducer,
   LOCATION_INFO,
-  locationInfoDefaultState,
+  defaultState,
 } from '../reducers/location';
 
 import {
@@ -19,14 +19,14 @@ import {
 const PersonalInfo = () => {
   const navigate = useNavigate();
 
-  let locationInfoFromLocalStorage = localStorage.getItem(LOCATION_INFO);
+  let fromLocalStorage = localStorage.getItem(LOCATION_INFO);
 
   let locationInfo;
 
-  if (locationInfoFromLocalStorage) {
-    locationInfo = JSON.parse(locationInfoFromLocalStorage);
+  if (fromLocalStorage) {
+    locationInfo = JSON.parse(fromLocalStorage);
   } else {
-    locationInfo = locationInfoDefaultState;
+    locationInfo = defaultState;
   }
 
   const [state, dispatch] = useReducer(reducer, locationInfo);
