@@ -9,7 +9,7 @@ export type ActionType = {
     largeStagePreference?: string | '';
     equityPreference?: string | '';
     salaryPreference?: string | '';
-    minimumSalary?: string | ''
+    minimumSalary?: string | '';
   };
 };
 
@@ -29,7 +29,7 @@ const reducer = (state: any, action: ActionType) => {
     case CAREER_PREFERENCES:
       return {
         ...state,
-        ...payload,
+        ...payload
       };
     default:
       return state;

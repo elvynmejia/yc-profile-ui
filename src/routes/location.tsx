@@ -3,16 +3,12 @@ import Button from '@material-ui/core/Button';
 
 import { useNavigate } from 'react-router-dom';
 
-import {
-  reducer,
-  LOCATION_INFO,
-  defaultState,
-} from '../reducers/location';
+import { reducer, LOCATION_INFO, defaultState } from '../reducers/location';
 
 import {
   REMOTE_WORK_PREFERENCES,
   EMPLOYMENT_SPONSORSHIP,
-  WORK_AUTHORIZATION,
+  WORK_AUTHORIZATION
 } from '../constants';
 
 // FIX: select radio button if loading data from local storage
@@ -45,8 +41,8 @@ const PersonalInfo = () => {
     dispatch({
       type: LOCATION_INFO,
       payload: {
-        [name]: value,
-      },
+        [name]: value
+      }
     });
   };
 
@@ -118,7 +114,7 @@ const PersonalInfo = () => {
         </div>
         <div className="submit-form">
           <Button
-            className='save-and-next-button'
+            className="save-and-next-button"
             variant="contained"
             color="primary"
             type="submit"

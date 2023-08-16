@@ -21,14 +21,14 @@ const router = createBrowserRouter([
       },
       {
         path: '/location',
-        element: <Location />,
+        element: <Location />
       },
       {
         path: '/career',
-        element: <Career />,
-      },
+        element: <Career />
+      }
     ]
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -2,11 +2,11 @@ const PERSONAL_INFO = 'PERSONAL_INFO';
 
 export type personalInfoDefaultStateType = {
   firstName: string | '';
-  lastName: string | '',
-  email: string | '',
-  linkedin: string | '',
-  jobStatus: string | '',
-  hideFrom: string | '',
+  lastName: string | '';
+  email: string | '';
+  linkedin: string | '';
+  jobStatus: string | '';
+  hideFrom: string | '';
 };
 
 const defaultState = {
@@ -15,7 +15,7 @@ const defaultState = {
   email: '',
   linkedin: '',
   jobStatus: 'yes',
-  hideFrom: '',
+  hideFrom: ''
 };
 
 const reducer = (state: any, action: any) => {
@@ -24,15 +24,11 @@ const reducer = (state: any, action: any) => {
     case PERSONAL_INFO:
       return {
         ...state,
-        ...payload,
+        ...payload
       };
     default:
       return state;
   }
 };
-  
-export {
-  PERSONAL_INFO,
-  reducer,
-  defaultState
-};
+
+export { PERSONAL_INFO, reducer, defaultState };

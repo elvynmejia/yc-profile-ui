@@ -11,7 +11,7 @@ const defaultState = {
   city: '',
   workAuthorization: '',
   sponsorship: '',
-  openToRemoteWork: '',
+  openToRemoteWork: ''
 };
 
 const reducer = (state: any, action: any) => {
@@ -20,7 +20,7 @@ const reducer = (state: any, action: any) => {
     case LOCATION_INFO:
       return {
         ...state,
-        ...payload,
+        ...payload
       };
     default:
       return state;

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   COMPANY_PREFERENCES as COMPANY_PREFERENCES_OPTIONS,
   EQUITY_PREFERENCE,
-  SALARY_PREFERENCE,
+  SALARY_PREFERENCE
 } from '../constants';
 
 import { CAREER_PREFERENCES, reducer, defaultState } from '../reducers/career';
@@ -30,8 +30,8 @@ const PersonalInfo = () => {
     dispatch({
       type: CAREER_PREFERENCES,
       payload: {
-        [name]: value,
-      },
+        [name]: value
+      }
     });
   };
 

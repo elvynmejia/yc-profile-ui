@@ -3,11 +3,7 @@ import Button from '@material-ui/core/Button';
 
 import { useNavigate } from 'react-router-dom';
 
-import {
-  reducer,
-  PERSONAL_INFO,
-  defaultState,
-} from '../reducers/profile';
+import { reducer, PERSONAL_INFO, defaultState } from '../reducers/profile';
 
 import { JOB_SEARCH_STATUS, AFFILIATIONS } from '../constants';
 
@@ -41,13 +37,13 @@ const PersonalInfo = () => {
     dispatch({
       type: PERSONAL_INFO,
       payload: {
-        [name]: value,
-      },
+        [name]: value
+      }
     });
   };
 
   const { email, linkedin, firstName, lastName, hideFrom, affiliation } = state;
-  console.log({ affiliation })
+  console.log({ affiliation });
   return (
     <div>
       <h1 className="page-header">Personal info</h1>
@@ -60,7 +56,7 @@ const PersonalInfo = () => {
         <div
           style={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: 'row'
           }}
         >
           <div
@@ -154,7 +150,7 @@ const PersonalInfo = () => {
 
         <div className="submit-form">
           <Button
-            className='save-and-next-button'
+            className="save-and-next-button"
             variant="contained"
             color="primary"
             type="submit"

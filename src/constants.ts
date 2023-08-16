@@ -1,39 +1,39 @@
 const JOB_SEARCH_STATUS = [
   {
     title: "I'm actively looking for a job",
-    value: 'yes',
+    value: 'yes'
   },
   {
     title: "I'm open to new opportunities",
-    value: 'passive',
+    value: 'passive'
   },
   {
     title:
       "I'm not looking for a job / not ready to meet founders yet. HIDE MY PROFILE.",
-    value: 'no',
-  },
+    value: 'no'
+  }
 ];
 
 const AFFILIATIONS = [
   {
     title: 'No affiliation',
-    value: 'none',
+    value: 'none'
   },
   {
     title: 'Current or former employee at YC company',
-    value: 'Current or former employee at YC company',
-  },
+    value: 'Current or former employee at YC company'
+  }
 ];
 
 const WORK_AUTHORIZATION = [
   {
     title: 'yes',
-    value: 'yes',
+    value: 'yes'
   },
   {
     title: 'No',
-    value: 'no',
-  },
+    value: 'no'
+  }
 ];
 
 const EMPLOYMENT_SPONSORSHIP = [...WORK_AUTHORIZATION];
@@ -41,45 +41,45 @@ const EMPLOYMENT_SPONSORSHIP = [...WORK_AUTHORIZATION];
 const REMOTE_WORK_PREFERENCES = [
   {
     title: "I'm open to working remotely",
-    value: 'yes',
+    value: 'yes'
   },
   {
     title: 'I only want to work remotely',
-    value: 'only',
+    value: 'only'
   },
   {
     title: "I don't want to work remotely",
-    value: 'no',
-  },
+    value: 'no'
+  }
 ];
-
 
 const COMPANY_PREFERENCES = [
   {
     title: 'Seed: 1 - 10 people',
     ratings: ['high', 'medium', 'low'],
-    name: 'seedStagePreference',
+    name: 'seedStagePreference'
   },
   {
     title: 'Small: 11 - 50 people',
     ratings: ['high', 'medium', 'low'],
-    name: 'smallStagePreference',
+    name: 'smallStagePreference'
   },
   {
     title: 'Medium: 51 - 300 people',
     ratings: ['high', 'medium', 'low'],
-    name: 'mediumStagePreference',
+    name: 'mediumStagePreference'
   },
   {
     title: 'Large: 301+ people',
     ratings: ['high', 'medium', 'low'],
-    name: 'largeStagePreference',
-  },
+    name: 'largeStagePreference'
+  }
 ];
 
 const EQUITY_PREFERENCE = [
   {
-    title: "I'm not that interested in startup equity; I'd prefer a cash-heavy package",
+    title:
+      "I'm not that interested in startup equity; I'd prefer a cash-heavy package",
     value: 'low'
   },
   {
@@ -87,7 +87,7 @@ const EQUITY_PREFERENCE = [
     value: 'medium'
   },
   {
-    title: "Equity is very important to me",
+    title: 'Equity is very important to me',
     value: 'high'
   }
 ];
@@ -98,7 +98,8 @@ const SALARY_PREFERENCE = [
     value: 'high'
   },
   {
-    title: "I have a minimum in mind, but would consider offers below it for the right company",
+    title:
+      'I have a minimum in mind, but would consider offers below it for the right company',
     value: 'medium'
   },
   {

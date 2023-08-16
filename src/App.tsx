@@ -4,15 +4,15 @@ import { Outlet } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   paper: {
     height: 140,
-    width: 100,
+    width: 100
   },
   control: {
-    padding: theme.spacing(2),
-  },
+    padding: theme.spacing(2)
+  }
 }));
 
 const App = () => {
