@@ -1,5 +1,7 @@
 My YC Profile ReactJS app scaffolded using ViteJs
 
+![alt alt game of life screenshot](https://github.com/elvynmejia/yc-profile-ui/blob/main/ui.png?raw=true)
+
 # Features
 - edit Personal Info
 - edit Location
@@ -33,4 +35,5 @@ My YC Profile ReactJS app scaffolded using ViteJs
 - validate data on the frontend
 - the pages at the React level have a lot in common. We could build the pages in a configuration driven approach to avoid code repetition
 - building remainig pages will be straightforward
-- Add TS types where missing like in the reducers
+- add TS types where missing like in the reducers
+- build reusable components to adhere to the DRY principle
