@@ -85,7 +85,6 @@ const PersonalInfo = () => {
             />
           </div>
         </div>
-
         <div className="form-control">
           <label htmlFor="html">Email Address (personal recommended) *</label>
           <input

@@ -1,4 +1,4 @@
-const COMPANY_PREFERENCES = 'COMPANY_PREFERENCES';
+const CAREER_PREFERENCES = 'CAREER_PREFERENCES';
 
 export type ActionType = {
   type: string;
@@ -7,6 +7,9 @@ export type ActionType = {
     smallStagePreference?: string | '';
     mediumStagePreference?: string | '';
     largeStagePreference?: string | '';
+    equityPreference?: string | '';
+    salaryPreference?: string | '';
+    minimumSalary?: string | ''
   };
 };
 
@@ -15,12 +18,15 @@ const defaultState = {
   smallStagePreference: '',
   mediumStagePreference: '',
   largeStagePreference: '',
+  equityPreference: '',
+  salaryPreference: '',
+  minimumSalary: ''
 };
 
 const reducer = (state: any, action: ActionType) => {
   const { type, payload } = action;
   switch (type) {
-    case COMPANY_PREFERENCES:
+    case CAREER_PREFERENCES:
       return {
         ...state,
         ...payload,
@@ -30,4 +36,4 @@ const reducer = (state: any, action: ActionType) => {
   }
 };
 
-export { COMPANY_PREFERENCES, reducer, defaultState };
+export { CAREER_PREFERENCES, reducer, defaultState };

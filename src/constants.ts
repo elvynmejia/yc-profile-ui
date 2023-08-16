@@ -77,11 +77,43 @@ const COMPANY_PREFERENCES = [
   },
 ];
 
+const EQUITY_PREFERENCE = [
+  {
+    title: "I'm not that interested in startup equity; I'd prefer a cash-heavy package",
+    value: 'low'
+  },
+  {
+    title: "I'd be interested in getting some equity at a promising company",
+    value: 'medium'
+  },
+  {
+    title: "Equity is very important to me",
+    value: 'high'
+  }
+];
+
+const SALARY_PREFERENCE = [
+  {
+    title: "Yes, I'm only interested in salaries at or above my minimum",
+    value: 'high'
+  },
+  {
+    title: "I have a minimum in mind, but would consider offers below it for the right company",
+    value: 'medium'
+  },
+  {
+    title: "I'm flexible, or not sure what my requirements are yet",
+    value: 'low'
+  }
+];
+
 export {
   JOB_SEARCH_STATUS,
   AFFILIATIONS,
   WORK_AUTHORIZATION,
   EMPLOYMENT_SPONSORSHIP,
   REMOTE_WORK_PREFERENCES,
-  COMPANY_PREFERENCES
+  COMPANY_PREFERENCES,
+  EQUITY_PREFERENCE,
+  SALARY_PREFERENCE
 };
